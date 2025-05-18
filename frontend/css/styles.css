@@ -144,6 +144,7 @@ img {
 .header .main-menu a {
 	padding: 0.8rem 1.6rem;
 	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 .header .main-menu a:hover {
@@ -159,12 +160,50 @@ img {
 	border-radius: 9px;
 }
 
-/* MEDIA QUERIES
+/* HERO
+======= */
+
+.hero {
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hero h2 {
+	font-size: 4.4rem;
+	line-height: 1.4;
+	font-weight: 700;
+	color: #c849c1;
+}
+
+.bg-primary {
+	font-family: 'Lora', serif;
+	font-size: 3.6rem;
+	font-style: italic;
+	color: #2d2d2d;
+	font-weight: normal;
+}
+
+/* MEDIA QUERIES 768px
 ================ */
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
 	.header .header-flex {
 		flex-direction: column;
 		gap: 2.4rem;
+	}
+
+	.hero {
+		height: 30rem;
+	}
+
+	.hero h2 {
+		font-size: 3.6rem;
+	}
+
+	.bg-primary {
+		font-size: 3rem;
 	}
 }
