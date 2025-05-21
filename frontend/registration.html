@@ -37,8 +37,8 @@
 			<div class="container container-sm header-flex">
 				<img src="/frontend/images/logo.png" alt="" class="logo" />
 				<ul class="main-menu">
-					<li><a class="current" href="index.html">Главная</a></li>
-					<li><a href="/frontend/registration.html">Регистрация</a></li>
+					<li><a href="index.html">Главная</a></li>
+					<li><a class="current" href="registration.html">Регистрация</a></li>
 					<li><a href="#">Письмо</a></li>
 					<li><a href="#">Архив</a></li>
 				</ul>
@@ -57,37 +57,45 @@
 			</div>
 		</section>
 
-		<section class="presentation">
-			<div class="container container-lg">
-				<h2>For portfolio</h2>
-				<div>
-					<h3>В данном проекте: "FromPast" представлены:</h3>
-					<p>
-						<strong>Регистрация пользователя</strong> Что делает: Позволяет
-						новому пользователю создать учётную запись. Как реализовано:
-						Используется стандартная форма Django UserCreationForm, с
-						подключённой системой авторизации. После регистрации пользователь
-						попадает в личную зону сайта и получает доступ к созданию и
-						просмотру своих писем.
+		<section class="registration backend-content">
+			<div class="form-registration container container-lg">
+				<h1>Регистрация</h1>
+				<form action="#" method="post">
+					<div class="input-group">
+						<label for="username"><i class="icon-user"></i></label>
+						<input type="text" id="username" placeholder="Username" required />
+					</div>
+					<div class="input-group">
+						<label for="password"><i class="icon-lock"></i></label>
+						<input
+							type="password"
+							id="password"
+							placeholder="Password"
+							required
+						/>
+					</div>
+					<div class="input-group">
+						<label for="confirm-password"><i class="icon-lock"></i></label>
+						<input
+							type="password"
+							id="confirm-password"
+							placeholder="Confirm Password"
+							required
+						/>
+					</div>
+					<div class="input-group">
+						<label for="email"><i class="icon-envelope"></i></label>
+						<input type="email" id="email" placeholder="E-mail" required />
+					</div>
+					<div class="checkbox-group">
+						<input type="checkbox" id="terms" required />
+						<label for="terms">Я принимаю условия использования</label>
+					</div>
+					<button type="submit" class="signup-btn">Зарегистрироваться</button>
+					<p class="login-link">
+						Уже зарегистрированы? <a href="#">Авторизация</a>
 					</p>
-					<p>
-						<strong>Создание письма в будущее</strong> Что делает: Пользователь
-						может написать письмо, выбрать дату доставки, и сохранить его для
-						будущего просмотра. Как реализовано: Используется Django ModelForm с
-						привязкой к модели Letter. Валидация проверяет, что дата находится в
-						будущем. Сохраняется связка письма с текущим пользователем. Письма
-						не отображаются до наступления даты.
-					</p>
-					<p>
-						<strong>Просмотр личного архива писем</strong> Что делает: Разделяет
-						письма на: * доставленные (их можно прочитать), * "запечатанные"
-						(будут доступны в будущем). Как реализовано: Во view используется
-						фильтрация писем по дате: письма с delivery_date <= today
-						отображаются, остальные - скрываются, показывая только информацию о
-						сроке ожидания. Для "будущих" писем доступно редактирование или
-						удаление.
-					</p>
-				</div>
+				</form>
 			</div>
 		</section>
 
