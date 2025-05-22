@@ -103,7 +103,7 @@ img {
 }
 
 .page-background {
-	height: 50rem;
+	height: 100vh;
 	background-image: linear-gradient(
 			to bottom,
 			rgba(161, 8, 167, 0.6),
@@ -359,6 +359,7 @@ img {
 	justify-content: center;
 	gap: 2rem;
 	margin-bottom: 1rem;
+	padding: 0.9rem;
 }
 
 .social-login a {
@@ -416,7 +417,8 @@ img {
 
 @media (max-width: 48em) {
 	.header .header-flex,
-	.footer .footer-flex {
+	.footer .footer-flex,
+	.registration .form-flex {
 		flex-direction: column;
 		gap: 2.4rem;
 	}
