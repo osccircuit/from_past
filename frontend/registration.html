@@ -57,44 +57,91 @@
 		</section>
 
 		<section class="registration page-background backend-content">
-			<div class="form-registration container container-lg">
-				<h1>Регистрация</h1>
-				<form action="#" method="post">
-					<div class="input-group">
-						<label for="username"><i class="icon-user"></i></label>
-						<input type="text" id="username" placeholder="Username" required />
+			<div class="container container-lg form-flex">
+				<div class="form-registration">
+					<h2>Регистрация</h2>
+					<form action="#" method="post">
+						<div class="input-group">
+							<label for="username"><i class="icon-user"></i></label>
+							<input
+								type="text"
+								id="username"
+								placeholder="Username"
+								required
+							/>
+						</div>
+						<div class="input-group">
+							<label for="password"><i class="icon-lock"></i></label>
+							<input
+								type="password"
+								id="password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<div class="input-group">
+							<label for="confirm-password"><i class="icon-lock"></i></label>
+							<input
+								type="password"
+								id="confirm-password"
+								placeholder="Confirm Password"
+								required
+							/>
+						</div>
+						<div class="input-group">
+							<label for="email"><i class="icon-envelope"></i></label>
+							<input type="email" id="email" placeholder="E-mail" required />
+						</div>
+						<div class="checkbox-group">
+							<input type="checkbox" id="terms" required />
+							<label for="terms">Я принимаю условия использования</label>
+						</div>
+						<button type="submit" class="signup-btn">Зарегистрироваться</button>
+						<p class="login-link">
+							Уже зарегистрированы? <a href="#">Авторизация</a>
+						</p>
+					</form>
+				</div>
+
+				<div class="signin-form">
+					<h2>Вход</h2>
+					<form action="#" method="post">
+						<div class="input-group">
+							<label for="username"><i class="icon-user"></i></label>
+							<input
+								type="text"
+								id="username"
+								placeholder="Имя пользователя"
+								required
+							/>
+						</div>
+						<div class="input-group">
+							<label for="password"><i class="icon-lock"></i></label>
+							<input
+								type="password"
+								id="password"
+								placeholder="Пароль"
+								required
+							/>
+						</div>
+
+						<div class="checkbox-group">
+							<input type="checkbox" id="remember-me" />
+							<label for="remember-me">Запомнить меня</label>
+							<a href="#" class="forgot-password">Забыли пароль?</a>
+						</div>
+						<button type="submit" class="signup-btn">Зарегистрироваться</button>
+					</form>
+					<div class="social-login">
+						<p>Или войдите с помощью одного из следующих:</p>
+						<div class="social-buttons">
+							<a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+							<a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+							<a href="#"><img src="google-icon.png" alt="Google" /></a>
+						</div>
+						<p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
 					</div>
-					<div class="input-group">
-						<label for="password"><i class="icon-lock"></i></label>
-						<input
-							type="password"
-							id="password"
-							placeholder="Password"
-							required
-						/>
-					</div>
-					<div class="input-group">
-						<label for="confirm-password"><i class="icon-lock"></i></label>
-						<input
-							type="password"
-							id="confirm-password"
-							placeholder="Confirm Password"
-							required
-						/>
-					</div>
-					<div class="input-group">
-						<label for="email"><i class="icon-envelope"></i></label>
-						<input type="email" id="email" placeholder="E-mail" required />
-					</div>
-					<div class="checkbox-group">
-						<input type="checkbox" id="terms" required />
-						<label for="terms">Я принимаю условия использования</label>
-					</div>
-					<button type="submit" class="signup-btn">Зарегистрироваться</button>
-					<p class="login-link">
-						Уже зарегистрированы? <a href="#">Авторизация</a>
-					</p>
-				</form>
+				</div>
 			</div>
 		</section>
 
