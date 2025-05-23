@@ -333,42 +333,36 @@ img {
 	box-shadow: inset 0 0 0 5px #380835;
 }
 
+.checkbox-group {
+	margin-bottom: 3.2rem;
+	font-size: 1.2rem;
+}
+
 .checkbox-group a {
-	margin-left: 0.5rem;
+	margin-left: 6rem;
 }
 
-.social-login {
-	margin-top: 2rem;
-}
-
-.social-login p {
+.signin-form p {
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
+	margin-top: 2.4rem;
+}
+
+.signin-form a {
+	margin-left: 3.2rem;
+	color: #5c2d91;
+}
+
+.signin-form a:hover {
+	text-decoration: underline;
 }
 
 .social-buttons {
 	display: flex;
 	justify-content: center;
 	gap: 2rem;
-	margin-bottom: 1rem;
+
 	padding: 0.9rem;
-}
-
-.social-login a {
-	color: #673ab7;
-}
-.social-icon {
-	width: 3rem;
-	height: 3rem;
-	padding: 0.3rem;
-	border-radius: 5px;
-}
-.social-icon_vk {
-	background-color: #1838ec;
-}
-
-.social-icon_gg {
-	background-color: #f11e1e;
 }
 
 /* FOOTER
