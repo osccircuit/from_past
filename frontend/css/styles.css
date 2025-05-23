@@ -245,14 +245,6 @@ img {
 	text-align: center;
 }
 
-.form-flex {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: 4.8rem;
-}
-
 .form-registration {
 	background-color: #fff;
 	padding: 3.2rem;
@@ -417,8 +409,7 @@ img {
 
 @media (max-width: 48em) {
 	.header .header-flex,
-	.footer .footer-flex,
-	.registration .form-flex {
+	.footer .footer-flex {
 		flex-direction: column;
 		gap: 2.4rem;
 	}
