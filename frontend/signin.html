@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="icon" href="/frontend/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="/frontend/css/styles.css" />
+		<title>FromPast</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container container-sm header-flex">
+				<img src="/frontend/images/logo.png" alt="" class="logo" />
+				<ul class="main-menu">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="registration.html">Регистрация</a></li>
+					<li><a class="current" href="signin.html">Вход</a></li>
+					<li><a href="#">Письмо</a></li>
+					<li><a href="#">Архив</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section class="registration page-background backend-content">
+			<div class="signin-form container container-lg">
+				<h2>Вход</h2>
+				<form action="#" method="post">
+					<div class="input-group">
+						<label for="username"><i class="icon-user"></i></label>
+						<input
+							type="text"
+							id="username"
+							placeholder="Имя пользователя"
+							required
+						/>
+					</div>
+					<div class="input-group">
+						<label for="password"><i class="icon-lock"></i></label>
+						<input
+							type="password"
+							id="password"
+							placeholder="Пароль"
+							required
+						/>
+					</div>
+
+					<div class="checkbox-group">
+						<input type="checkbox" id="remember-me" />
+						<label for="remember-me">Запомнить меня</label>
+						<a href="#" class="forgot-password">Забыли пароль?</a>
+					</div>
+					<button type="submit" class="signup-btn">Войти</button>
+				</form>
+				
+				<p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container footer-flex">
+				<img src="/frontend/images/logo.png" alt="" class="logo" />
+				<div class="contact">
+					<h4>Cвязаться с нами</h4>
+					<ul>
+						<li>8 999 777 55 33</li>
+						<li>contact@frompast.test</li>
+						<li>РФ г.Балабург, пл.Илона Маска стр.77, оф.300</li>
+					</ul>
+				</div>
+				<div class="social">
+					<h4>Подпишись</h4>
+					<a href="#"><i class="fab fa-vk fa-2x"></i></a>
+					<a href="#"><i class="fab fa-telegram fa-2x"></i></a>
+					<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
