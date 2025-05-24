@@ -6,6 +6,7 @@ from main.models import Stack
 class MainPageView(ListView):
     template_name = 'main/index.html'
     model = Stack
+    context_object_name = 'stacks'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
