@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block hero_content %}
+	<section class="hero">
+		<div class="container container-sm">
+			<h2>
+				Письма из прошлого:
+				<span class="primary"
+					>От тебя к тебе! Прошлое не молчит - оно ждёт, когда ты его
+					услышишь.
+				</span>
+			</h2>
+		</div>
+	</section>
+{% endblock hero_content %}
+
+{% block content %}
+	<section class="presentation page-background" style="
+												  background-image: linear-gradient(
+												  	to bottom,
+												  	rgba(161, 8, 167, 0.6),
+												  	rgba(161, 8, 167, 0.8)
+												  ),
+												  url('{% static "images/code.jpg" %}');">
+		<div class="container container-lg">
+			<h2>For portfolio</h2>
+			<div>
+				<h3>В данном проекте: "FromPast" представлены:</h3>
+				{% for stack in  stacks %}
+				    <p>
+				    	<strong>{{ stack.feature_name }}</strong>
+						Что делает: {{ stack.what_do }} 
+				    	Как реализовано: {{ stack.how_did }}
+				    </p>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock content %}
