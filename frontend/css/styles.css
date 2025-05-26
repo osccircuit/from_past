@@ -207,7 +207,7 @@ img {
 			rgba(161, 8, 167, 0.6),
 			rgba(161, 8, 167, 0.8)
 		),
-		url('/frontend/images/code.jpg');
+		url('/frontend/images/код.jpg');
 	background-repeat: no-repeat, no-repeat;
 	background-position: center center, center center;
 	background-size: cover, cover;
@@ -326,7 +326,6 @@ img {
 	color: #ffd700;
 	font-size: 1.6rem;
 	cursor: pointer;
-	
 }
 
 .btn-letter:hover {
@@ -334,7 +333,6 @@ img {
 	background-color: #c849c1;
 	transition: all 1s;
 	color: #250524;
-	
 }
 
 .letter button {
