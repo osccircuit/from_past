@@ -196,7 +196,7 @@ img {
 			rgba(161, 8, 167, 0.6),
 			rgba(161, 8, 167, 0.8)
 		),
-		url('/frontend/images/код.jpg');
+		url('/frontend/images/code.jpg');
 	background-repeat: no-repeat, no-repeat;
 	background-position: center center, center center;
 	background-size: cover, cover;
