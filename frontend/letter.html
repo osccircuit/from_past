@@ -50,7 +50,7 @@
 				<h2>
 					Письма из прошлого:
 					<span class="primary"
-						>От меня, который был! Ко мне, которым стал!
+						>От меня, каким я был! Ко мне, каким я стал!
 					</span>
 				</h2>
 			</div>
@@ -58,11 +58,41 @@
 
 		<section class="letter">
 			<div class="container container-sm">
+				<h2 class="letter-heading">Письмо в будущее</h2>
+				<p>Напиши себе - тому, кем ты будешь через год, пять или десять лет.</p>
 				<form>
 					<div class="form-letter">
-						<label for="first-name">Письмо в будущее</label>
+						<label for="letter-label-to">Кому</label>
+						<input type="text" id="letter-label-to" name="letter-label-to" />
+					</div>
+					<div class="form-letter">
+						<label for="futureDate">Дата будущего</label>
+						<input type="date" id="futureDate" name="futureDate" />
 					</div>
 
+					<div class="form-letter">
+						<label for="letter-label-from">От кого</label>
+						<input
+							type="text"
+							id="letter-label-from"
+							name="letter-label-from"
+						/>
+					</div>
+					<div class="form-letter">
+						<label for="currentDate">Дата настоящего</label>
+						<input type="date" id="currentDate" name="currentDate" />
+					</div>
+					<div class="form-letter">
+						<label for="letterContent">Ваше письмо</label>
+						<textarea
+							type="date"
+							id="letterContent"
+							name="letterContent"
+						></textarea>
+					</div>
+					<div class="form-letter">
+						<button class="btn-letter" type="submit">Отправить письмо</button>
+					</div>
 				</form>
 			</div>
 		</section>
