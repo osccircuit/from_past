@@ -233,6 +233,15 @@ img {
 	color: #ffd700;
 }
 
+/* LETTER
+--------- */
+
+.letter {
+    background: url(/frontend/images/bc-letter.jpg) no-repeat center center / cover;
+		
+}
+
+
 /* FOOTER
 ========= */
 
