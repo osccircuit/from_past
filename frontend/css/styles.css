@@ -102,6 +102,17 @@ img {
 	max-width: 100%;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
 /* CONTAINER
 ============ */
 
@@ -237,14 +248,9 @@ img {
 --------- */
 
 .letter {
-	background: url(/frontend/images/bc-letter.jpg) no-repeat center center /
-		cover;
 	padding: 4.8rem 0 6.4rem;
-
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center; */
+	background-color: #f5f5dc;
+	position: relative;
 }
 
 .letter h2 {
@@ -261,7 +267,7 @@ img {
 	font-size: 1.6rem;
 	font-weight: 600;
 	color: #2d2d2d;
-	margin-bottom: 3.2rem;
+	margin-bottom: 4.8rem;
 	text-align: center;
 }
 
@@ -269,27 +275,44 @@ img {
 	margin: 3.2rem 0;
 }
 
-.letter input,
-.letter textarea {
-	background: url(/frontend/images/bc-letter_form.jpg) no-repeat center center /
-		cover;
+.form-letter input,
+.form-letter textarea {
 	border: none;
 	outline: none;
 	border-bottom: 1px solid #2d2d2d;
 	width: 100%;
-	padding-bottom: 1.6rem;
-	font-family: inherit;
-	font-size: inherit;
+	padding-bottom: 0.6rem;
+	background-color: #f5f5dc;
 }
 
-.form-letter label {
+.form-letter textarea {
+	height: 20rem;
+}
+
+.form-date label,
+.form-letter ::placeholder {
 	font-family: 'Lora', serif;
-	font-size: 1.8rem;
 	font-style: italic;
-	font-weight: 700;
+	font-size: 1.6rem;
 }
 
+.form-date input {
+	border: none;
+	border-bottom: 1px solid #2d2d2d;
+	margin-left: 3.2rem;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.4rem;
+	background-color: #f5f5dc;
+}
 
+.corner-image {
+	position: absolute;
+	top: 4rem; /* Расстояние от верхнего края */
+	right: 6rem; /* Расстояние от правого края */
+	width: 10rem; /* Размер изображения */
+	height: auto; /* Сохраняем пропорции */
+	z-index: 1;
+}
 
 /* FOOTER
 ========= */
