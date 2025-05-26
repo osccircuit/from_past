@@ -286,7 +286,7 @@ img {
 }
 
 .form-letter textarea {
-	height: 20rem;
+	height: 30rem;
 }
 
 .form-date label,
@@ -305,6 +305,10 @@ img {
 	background-color: #f5f5dc;
 }
 
+.form-date input:focus {
+	outline: 0;
+}
+
 .corner-image {
 	position: absolute;
 	top: 4rem; /* Расстояние от верхнего края */
@@ -312,6 +316,29 @@ img {
 	width: 12rem; /* Размер изображения */
 	height: auto; /* Сохраняем пропорции */
 	z-index: 1;
+}
+
+.btn-letter {
+	display: inline-block;
+	padding: 1.6rem 3.2rem;
+	border: 1px solid #2d2d2d;
+	background-color: #250524;
+	color: #ffd700;
+	font-size: 1.6rem;
+	cursor: pointer;
+	
+}
+
+.btn-letter:hover {
+	box-shadow: inset 0 0 0 3px #ffd700;
+	background-color: #c849c1;
+	transition: all 1s;
+	color: #250524;
+	
+}
+
+.letter button {
+	width: 100%;
 }
 
 /* FOOTER
@@ -383,5 +410,12 @@ img {
 
 	.footer .footer-flex {
 		text-align: center;
+	}
+
+	.corner-image {
+		top: 0;
+		right: 0;
+		width: 5rem;
+		height: auto;
 	}
 }
