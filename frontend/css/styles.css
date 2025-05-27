@@ -257,6 +257,136 @@ img {
 	color: #ffd700;
 }
 
+/* REGISTRATION
+=============== */
+
+.registration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.form-registration {
+	background-color: #fff;
+	padding: 3.2rem;
+	border-radius: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 30rem;
+	text-align: center;
+	box-shadow: inset 0 0 0 5px #380835;
+}
+
+.registration h2 {
+	color: #380835;
+	background-color: #ffd700;
+	padding: 1rem 0;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 2rem;
+	font-size: 2.4rem;
+}
+
+.input-group {
+	margin-bottom: 1.5rem;
+}
+
+.input-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #380835;
+	font-weight: bold;
+}
+
+.input-group input {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 0.4rem;
+	outline: none;
+}
+
+.checkbox-group {
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-group input[type='checkbox'] {
+	margin-right: 0.5rem;
+}
+
+.signup-btn {
+	width: 100%;
+	padding: 1rem;
+	background-color: #380835;
+	color: #ffd700;
+	border: none;
+	border-radius: 9px;
+	cursor: pointer;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.signup-btn:hover {
+	background-color: #5c2d91;
+	transition: all 1s;
+}
+
+.login-link {
+	margin-top: 1rem;
+	font-size: 1.2rem;
+}
+
+.login-link a {
+	color: #673ab7;
+}
+
+.login-link a:hover {
+	text-decoration: underline;
+}
+
+.signin-form {
+	background-color: #fff;
+	padding: 3.2rem;
+	border-radius: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 30rem;
+	text-align: center;
+	box-shadow: inset 0 0 0 5px #380835;
+}
+
+.checkbox-group {
+	margin-bottom: 3.2rem;
+	font-size: 1.2rem;
+}
+
+.checkbox-group a {
+	margin-left: 6rem;
+}
+
+.signin-form p {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	margin-top: 2.4rem;
+}
+
+.signin-form a {
+	margin-left: 3.2rem;
+	color: #5c2d91;
+}
+
+.signin-form a:hover {
+	text-decoration: underline;
+}
+
+.social-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+
+	padding: 0.9rem;
+}
+
 /* LETTER
 --------- */
 
