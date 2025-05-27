@@ -4,5 +4,10 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     image = models.ImageField(
-        upload_to="user_images", height_field=300, width_field=300
+        upload_to="user_images", blank=True, null=True,
+        verbose_name='Аватарка'
     )
+    
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
