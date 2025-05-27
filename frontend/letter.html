@@ -37,12 +37,10 @@
 			<div class="container container-sm header-flex">
 				<img src="/frontend/images/logo.png" alt="" class="logo" />
 				<ul class="main-menu">
-					<li><a class="current" href="index.html">Главная</a></li>
-<<<<<<
+					<li><a href="index.html">Главная</a></li>
 					<li><a href="registration.html">Регистрация</a></li>
 					<li><a href="signin.html">Вход</a></li>
-
-					<li><a href="letter.html">Письмо</a></li>
+					<li><a class="current" href="letter.html">Письмо</a></li>
 					<li><a href="#">Архив</a></li>
 				</ul>
 			</div>
@@ -53,44 +51,62 @@
 				<h2>
 					Письма из прошлого:
 					<span class="primary"
-						>От тебя к тебе! Прошлое не молчит - оно ждёт, когда ты его
-						услышишь.
+						>От меня, каким я был! Ко мне, каким я стал!
 					</span>
 				</h2>
 			</div>
 		</section>
 
-		<section class="presentation page-background">
-			<div class="container container-lg">
-				<h2>For portfolio</h2>
-				<div>
-					<h3>В данном проекте: "FromPast" представлены:</h3>
-					<p>
-						<strong>Регистрация пользователя</strong> Что делает: Позволяет
-						новому пользователю создать учётную запись. Как реализовано:
-						Используется стандартная форма Django UserCreationForm, с
-						подключённой системой авторизации. После регистрации пользователь
-						попадает в личную зону сайта и получает доступ к созданию и
-						просмотру своих писем.
-					</p>
-					<p>
-						<strong>Создание письма в будущее</strong> Что делает: Пользователь
-						может написать письмо, выбрать дату доставки, и сохранить его для
-						будущего просмотра. Как реализовано: Используется Django ModelForm с
-						привязкой к модели Letter. Валидация проверяет, что дата находится в
-						будущем. Сохраняется связка письма с текущим пользователем. Письма
-						не отображаются до наступления даты.
-					</p>
-					<p>
-						<strong>Просмотр личного архива писем</strong> Что делает: Разделяет
-						письма на: * доставленные (их можно прочитать), * "запечатанные"
-						(будут доступны в будущем). Как реализовано: Во view используется
-						фильтрация писем по дате: письма с delivery_date <= today
-						отображаются, остальные - скрываются, показывая только информацию о
-						сроке ожидания. Для "будущих" писем доступно редактирование или
-						удаление.
-					</p>
-				</div>
+		<section class="letter">
+			<div class="container container-sm">
+				<img
+					src="/frontend/images/марка.jpg"
+					alt="Угловой элемент почтовая марка"
+					class="corner-image"
+				/>
+				<h2 class="letter-heading">Письмо в будущее</h2>
+				<p>Напиши себе - тому, кем ты будешь через год, пять или десять лет.</p>
+				<form>
+					<div class="form-letter">
+						<label class="visually-hidden" for="letter-label-to">Кому</label>
+						<input
+							type="text"
+							id="letter-label-to"
+							name="letter-label-to"
+							placeholder="Кому"
+						/>
+						<div class="form-letter">
+							<label class="visually-hidden" for="letter-label-from"
+								>От кого</label
+							>
+							<input
+								type="text"
+								id="letter-label-from"
+								name="letter-label-from"
+								placeholder="От кого"
+							/>
+						</div>
+					</div>
+					<div class="form-date">
+						<label for="futureDate">Дата получения</label>
+						<input type="date" id="futureDate" name="futureDate" />
+					</div>
+
+					<div class="form-letter">
+						<label class="visually-hidden" for="letterContent"
+							>Ваше письмо</label
+						>
+						<textarea
+							type="date"
+							id="letterContent"
+							name="letterContent"
+							placeholder="Ваше письмо"
+						></textarea>
+					</div>
+					<div class="form-letter">
+						<button class="btn-letter" type="submit">Отправить письмо</button>
+					</div>
+				</form>
 			</div>
 		</section>
 

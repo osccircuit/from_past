@@ -102,6 +102,19 @@ img {
 	max-width: 100%;
 }
 
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+
 .page-background {
 	height: 100vh;
 	background-image: linear-gradient(
@@ -365,6 +378,103 @@ img {
 	padding: 0.9rem;
 }
 
+
+/* LETTER
+--------- */
+
+.letter {
+	padding: 4.8rem 0 6.4rem;
+	background-color: #f5f5dc;
+	position: relative;
+}
+
+.letter h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 3.2rem;
+	font-weight: 900;
+	line-height: 1.6;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}
+
+.letter p {
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #2d2d2d;
+	margin-bottom: 4.8rem;
+	text-align: center;
+}
+
+.form-letter {
+	margin: 3.2rem 0;
+}
+
+.form-letter input,
+.form-letter textarea {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #2d2d2d;
+	width: 100%;
+	padding-bottom: 0.6rem;
+	background-color: #f5f5dc;
+}
+
+.form-letter textarea {
+	height: 30rem;
+}
+
+.form-date label,
+.form-letter ::placeholder {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 1.6rem;
+}
+
+.form-date input {
+	border: none;
+	border-bottom: 1px solid #2d2d2d;
+	margin-left: 3.2rem;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.4rem;
+	background-color: #f5f5dc;
+}
+
+.form-date input:focus {
+	outline: 0;
+}
+
+.corner-image {
+	position: absolute;
+	top: 4rem; /* Расстояние от верхнего края */
+	right: 6rem; /* Расстояние от правого края */
+	width: 12rem; /* Размер изображения */
+	height: auto; /* Сохраняем пропорции */
+	z-index: 1;
+}
+
+.btn-letter {
+	display: inline-block;
+	padding: 1.6rem 3.2rem;
+	border: 1px solid #2d2d2d;
+	background-color: #250524;
+	color: #ffd700;
+	font-size: 1.6rem;
+	cursor: pointer;
+}
+
+.btn-letter:hover {
+	box-shadow: inset 0 0 0 3px #ffd700;
+	background-color: #c849c1;
+	transition: all 1s;
+	color: #250524;
+}
+
+.letter button {
+	width: 100%;
+}
+
+
 /* FOOTER
 ========= */
 
@@ -434,5 +544,12 @@ img {
 
 	.footer .footer-flex {
 		text-align: center;
+	}
+
+	.corner-image {
+		top: 0;
+		right: 0;
+		width: 5rem;
+		height: auto;
 	}
 }
