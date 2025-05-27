@@ -113,6 +113,19 @@ img {
 	clip: rect(0 0 0 0);
 }
 
+.page-background {
+	height: 100vh;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(161, 8, 167, 0.6),
+			rgba(161, 8, 167, 0.8)
+		),
+		url('/frontend/images/код.jpg');
+	background-repeat: no-repeat, no-repeat;
+	background-position: center center, center center;
+	background-size: cover, cover;
+}
+
 /* CONTAINER
 ============ */
 
