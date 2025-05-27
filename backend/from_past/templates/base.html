@@ -39,7 +39,7 @@
 			<div class="container container-sm header-flex">
 				<img src="{% static "images/logo.png" %}" alt="" class="logo" />
 				<ul class="main-menu">
-					<li><a class="current" href="index.html">Главная</a></li>
+					<li><a class="current" href="{% url "main:index" %}">Главная</a></li>
 					<li><a href="/frontend/registration.html">Регистрация</a></li>
 					<li><a href="signin.html">Вход</a></li>
 					<li><a href="#">Письмо</a></li>
