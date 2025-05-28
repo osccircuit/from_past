@@ -16,6 +16,7 @@
             "autoStartBrowser": false,
             "program": "${workspaceFolder}/backend/from_past/manage.py",
             "cwd": "${workspaceFolder}/backend/from_past",
+            "justMyCode": false,
         }
     ]
 }

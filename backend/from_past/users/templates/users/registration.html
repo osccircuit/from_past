@@ -12,17 +12,19 @@
 												  url('{% static "images/code.jpg" %}');">
 			<div class="form-registration container container-lg">
 				<h2>Регистрация</h2>
-				<form action="#" method="post">
+				<form action="{% url "users:registration" %}" method="post">
+					{% csrf_token %}
 					<div class="input-group">
 						<label for="username"><i class="icon-user"></i></label>
-						<input type="text" id="username" placeholder="Username" required />
+						<input type="text" id="username" placeholder="{{ form.username.field.widget.attrs.placeholder }}" name="username" required />
 					</div>
 					<div class="input-group">
 						<label for="password"><i class="icon-lock"></i></label>
 						<input
 							type="password"
-							id="password"
-							placeholder="Password"
+							id="password" 
+							name="password1"
+							placeholder="{{ form.password1.field.widget.attrs.placeholder }}"
 							required
 						/>
 					</div>
@@ -31,13 +33,14 @@
 						<input
 							type="password"
 							id="confirm-password"
-							placeholder="Confirm Password"
+							name="password2"
+							placeholder="{{ form.password2.field.widget.attrs.placeholder }}"
 							required
 						/>
 					</div>
 					<div class="input-group">
 						<label for="email"><i class="icon-envelope"></i></label>
-						<input type="email" id="email" placeholder="E-mail" required />
+						<input type="email" id="email" name="email" placeholder="{{ form.email.field.widget.attrs.placeholder }}" required />
 					</div>
 					<div class="checkbox-group">
 						<input type="checkbox" id="terms" required />
