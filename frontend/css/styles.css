@@ -547,6 +547,49 @@ img {
 	margin-top: 1.8rem;
 }
 
+/* Модалка - фон */
+.modal-archive {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+/* Контент */
+.modal-content-archive {
+	background-color: #f5f5dc;
+	padding: 2rem 3rem;
+	border-radius: 11px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	max-width: 50rem;
+	width: 90%;
+	position: relative;
+	font-family: 'Lora', serif;
+	color: #250524;
+	font-size: 1.4rem;
+}
+
+/* Закрыть */
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 2rem;
+	color: #250524;
+	cursor: pointer;
+}
+
+/* Скрыто по умолчанию */
+.hidden {
+	display: none;
+}
+
 .user-card {
 	display: flex;
 	justify-content: center;

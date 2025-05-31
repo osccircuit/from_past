@@ -31,54 +31,38 @@ window.addEventListener('click', event => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	const archiveButtons = document.querySelectorAll('.btn-archive')
+	const modal = document.getElementById('modal-archive')
+	const modalTitle = document.getElementById('modal-title')
+	const modalText = document.getElementById('modal-text')
+	const closeButton = document.querySelector('.close-button')
+
+	const letters = {
+		2018: 'Дорогая Мария, это письмо из 2018 года. Мы тогда только начинали наш путь...',
+		2019: 'Мария, вспоминаю 2019 год с теплотой. Тогда всё было иначе...',
+		2020: 'Письмо из 2020 года. Год перемен и размышлений.',
+		2021: 'Это послание из 2021 года — время надежды и восстановления.',
+		2022: 'Письмо из 2022 года. Мы стали ближе и сильнее.',
+		2023: '2023 год был богат событиями. Вот что я тогда чувствовала...',
+	}
 
 	archiveButtons.forEach(button => {
-		button.addEventListener('click', function (e) {
-			e.preventDefault()
-
+		button.addEventListener('click', function () {
 			const year = button.dataset.year
-
-			// Пример текста для писем — можно позже заменить на запрос к серверу
-			const letters = {
-				2018: 'Дорогая Мария, это письмо из 2018 года. Мы тогда только начинали наш путь...',
-				2019: 'Мария, вспоминаю 2019 год с теплотой. Тогда всё было иначе...',
-				2020: 'Письмо из 2020 года. Год перемен и размышлений.',
-				2021: 'Это послание из 2021 года — время надежды и восстановления.',
-				2022: 'Письмо из 2022 года. Мы стали ближе и сильнее.',
-				2023: '2023 год был богат событиями. Вот что я тогда чувствовала...',
-			}
-
-			const letterText = letters[year] || 'Письмо не найдено.'
-
-			const letterHTML = `
-				<!DOCTYPE html>
-				<html lang="ru">
-				<head>
-					<meta charset="UTF-8">
-					<title>Письмо из ${year} года</title>
-					<style>
-						body {
-							font-family: 'Lora', serif;
-							padding: 2rem;
-							background-color: #fffaf0;
-							color: #250524;
-							line-height: 1.6;
-						}
-						h2 {
-							color: #380835;
-						}
-					</style>
-				</head>
-				<body>
-					<h2>Письмо из ${year} года</h2>
-					<p>${letterText}</p>
-				</body>
-				</html>
-			`
-
-			const letterWindow = window.open('', '_blank', 'width=600,height=400')
-			letterWindow.document.write(letterHTML)
-			letterWindow.document.close()
+			const text = letters[year] || 'Письмо не найдено.'
+			modalTitle.textContent = `Письмо из ${year} года`
+			modalText.textContent = text
+			modal.classList.remove('hidden')
 		})
+	})
+
+	closeButton.addEventListener('click', function () {
+		modal.classList.add('hidden')
+	})
+
+	// Закрытие по клику вне окна
+	window.addEventListener('click', function (e) {
+		if (e.target === modal) {
+			modal.classList.add('hidden')
+		}
 	})
 })
