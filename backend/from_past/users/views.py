@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse, reverse_lazy, resolve
 from django.views.generic import TemplateView, CreateView
 from django.http import HttpResponseRedirect
 from django.contrib.auth.views import LoginView
@@ -31,6 +31,8 @@ class SignInView(LoginView):
     form_class = LoginForm
 
     def get_success_url(self):
+        if self.request.POST.get('next'):
+            return self.request.POST.get('next')
         return reverse_lazy("main:index")
 
     def form_valid(self, form):
