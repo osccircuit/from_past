@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
 from users.models import User
 
@@ -24,7 +24,24 @@ class RegistrationUserForm(UserCreationForm):
         required=True,
         widget=forms.TextInput(attrs={"placeholder": "Повторите пароль"}),
     )
-    
-    class Meta():
+
+    class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ("username", "email", "password1", "password2")
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(
+        label="Имя пользователя",
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Имя пользователя"}),
+    )
+    password = forms.CharField(
+        label="Пароль",
+        required=True,
+        widget=forms.TextInput(attrs={"placeholder": "Пароль"}),
+    )
+
+    class Meta:
+        model = User
+        fields = ['username', 'password']

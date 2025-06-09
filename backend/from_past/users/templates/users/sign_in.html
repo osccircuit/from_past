@@ -12,14 +12,16 @@
 												  url('{% static "images/code.jpg" %}');">
 			<div class="signin-form container container-lg">
 				<h2>Вход</h2>
-				<form action="#" method="post">
+				<form action="{% url "users:sign_in" %}" method="post">
+					{% csrf_token %}
 					<div class="input-group">
 						<label for="username"><i class="icon-user"></i></label>
 						<input
 							type="text"
 							id="username"
-							placeholder="Имя пользователя"
-							required
+							name="username"
+							placeholder="{{ form.username.field.widget.attrs.placeholder }}"
+							required="{{ form.username.required }}"	
 						/>
 					</div>
 					<div class="input-group">
@@ -27,8 +29,9 @@
 						<input
 							type="password"
 							id="password"
-							placeholder="Пароль"
-							required
+							name="password"
+							placeholder="{{ form.password.field.widget.attrs.placeholder }}"
+							required="{{ form.password.required }}"	
 						/>
 					</div>
 
