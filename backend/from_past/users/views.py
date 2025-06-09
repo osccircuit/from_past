@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import TemplateView, CreateView
 from users.forms import RegistrationUserForm
+from users.models import User
 
 class RegistrationView(CreateView):
     template_name = 'users/registration.html'
@@ -16,9 +17,10 @@ class RegistrationView(CreateView):
         return context
     
     def form_valid(self, form):
-        # user = form.instance
-        # return super().form_valid(form)
-        return redirect(self.get_success_url())
+        form.save()
+        form.instance
+        return super().form_valid(form)
+
 class SignInView(TemplateView):
     template_name = 'users/sign_in.html'
     
