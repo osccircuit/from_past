@@ -40,17 +40,17 @@
 			<div class="container container-sm header-flex">
 				<img src="{% static "images/logo.png" %}" alt="" class="logo" />
 				<ul class="main-menu">
-					<li><a class="current" href="{% url "main:index" %}">Главная</a></li>
-					<li><a href="{% url "letter:letter" %}">Письмо</a></li>
-					<li><a href="#">Архив</a></li>
+					<li><a class="dock current" href="{% url "main:index" %}">Главная</a></li>
+					<li><a class="dock" href="{% url "letter:letter" %}">Письмо</a></li>
+					<li><a class="dock" >Архив</a></li>
 					{% if user.is_authenticated %}
-						<li><a href="{% url "users:logout" %}" onclick="document.getElementById('logout_form').submit(); return false;">Выход</a></li>
+						<li><a class="dock" href="{% url "users:logout" %}" onclick="document.getElementById('logout_form').submit(); return false;">Выход</a></li>
 						<li><form method="post" id="logout_form" action="{% url 'users:logout' %}">
 						  {% csrf_token %}
 						</form></li>
 					{% else %}
-						<li><a href="{% url "users:registration" %}">Регистрация</a></li>
-						<li><a href="{% url "users:sign_in" %}">Вход</a></li>
+						<li><a class="dock" href="{% url "users:registration" %}">Регистрация</a></li>
+						<li><a class="dock" href="{% url "users:sign_in" %}">Вход</a></li>
 					{% endif %}
 					{% if user.is_staff or user.is_admin %}
 						<li><a href="{% url "admin:index" %}">Админ панель</a></li>
@@ -81,5 +81,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="{% static "js/scripts.js" %}"></script>
 	</body>
 </html>
