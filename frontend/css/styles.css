@@ -655,6 +655,11 @@ img {
 	margin-bottom: 4.8rem;
 }
 
+.archive-card p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
 .read-btn {
 	align-self: center;
 	margin-top: auto;
