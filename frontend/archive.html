@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="icon" href="/frontend/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="/frontend/css/styles.css" />
+		<link rel="stylesheet" href="/frontend/JS/modal.js" />
+		<title>FromPast</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container container-sm header-flex">
+				<img src="/frontend/images/logo.png" alt="" class="logo" />
+				<ul class="main-menu">
+					<li><a href="index.html">Главная</a></li>
+
+					<li><a href="registration.html">Регистрация</a></li>
+					<li><a href="signin.html">Вход</a></li>
+
+					<li><a href="letter.html">Письмо</a></li>
+					<li><a class="current" href="archive.html">Архив</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section class="hero">
+			<div class="container container-sm hero-flex">
+				<div class="user-card">
+					<img
+						src="/frontend/images/1-Мария.jpg"
+						alt="фотография пользователя"
+					/>
+					<p>Мария Петрова</p>
+					<p class="user-email">maria.p@test.com</p>
+				</div>
+				<div class="hero-title">
+					<h2>
+						Письма, которые:
+						<span class="primary"
+							>ждут своего часа - твой архив мыслей, адресованных себе.
+						</span>
+					</h2>
+				</div>
+			</div>
+		</section>
+
+		<section class="archive page-background">
+			<div class="container container-lg archive-flex">
+				<div class="letter-card">
+					
+					<h2 class="archive-heading">Письмо из прошлого</h2>
+					<span>Отправлено: 23.06.2019</span>
+					<span>Получено: 01.01.2025</span>
+					<p>
+						"Это письмо отправлено из прошлого. Получатель - ты. Время
+						изменилось, ты изменилась…"
+					</p>
+
+					<button class="read-btn signup-btn archive-btn">Прочитать</button>
+				</div>
+				<div id="modal" class="modal">
+					<div class="modal-content">
+						<span class="close-btn">&times;</span>
+						<p id="letter-text">
+							Это письмо отправлено из прошлого. Получатель - ты. Время
+							изменилось, ты изменилась…В рамках спецификации современных
+							стандартов, независимые государства, вне зависимости от их уровня,
+							должны быть заблокированы в рамках своих собственных рациональных
+							ограничений. Ясность нашей позиции очевидна: консультация с
+							широким активом не оставляет шанса для своевременного выполнения
+							сверхзадачи. Лишь независимые государства освещают чрезвычайно
+							интересные особенности картины в целом, однако конкретные выводы,
+							разумеется, ограничены исключительно образом мышления.
+						</p>
+					</div>
+				</div>
+				<div class="letter-card">
+					
+					<h2 class="archive-heading">Письмо из прошлого</h2>
+					<span>Отправлено: 23.06.2017</span>
+					<span>Получить: 01.01.2026</span>
+					<p>
+						"Привет! Пишу тебе из прошлого - самой себе. Интересно, какая ты
+						теперь..."
+					</p>
+
+					<button class="read-btn signup-btn archive-btn">Удалить</button>
+				</div>
+
+				<div class="letter-card  archive-card">
+					<div class="user-card-archive">
+						<!-- <img
+							src="/frontend/images/1-Мария.jpg"
+							alt="фотография пользователя"
+						/> -->
+						<p>Архив Марии</p>
+					</div>
+					<div class="archive-items-flex">
+						<ul class="archive-items">
+							<li>
+								<button class="btn-archive" type="button" data-year="2018">
+									Письмо из 2018 года
+								</button>
+							</li>
+							<li>
+								<button class="btn-archive" type="button" data-year="2019">
+									Письмо из 2019 года
+								</button>
+							</li>
+							<li>
+								<button class="btn-archive" type="button" data-year="2020">
+									Письмо из 2020 года
+								</button>
+							</li>
+							<li>
+								<button class="btn-archive" type="button" data-year="2021">
+									Письмо из 2021 года
+								</button>
+							</li>
+							<li>
+								<button class="btn-archive" type="button" data-year="2022">
+									Письмо из 2022 года
+								</button>
+							</li>
+							<li>
+								<button class="btn-archive" type="button" data-year="2023">
+									Письмо из 2023 года
+								</button>
+							</li>
+						</ul>
+						<div id="modal-archive" class="modal-archive hidden">
+							<div class="modal-content-archive">
+								<span class="close-button">&times;</span>
+								<h2 id="modal-title"></h2>
+								<p id="modal-text"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container footer-flex">
+				<img src="/frontend/images/logo.png" alt="" class="logo" />
+				<div class="contact">
+					<h4>Cвязаться с нами</h4>
+					<ul>
+						<li>8 999 777 55 33</li>
+						<li>contact@frompast.test</li>
+						<li>РФ г.Балабург, пл.Илона Маска стр.77, оф.300</li>
+					</ul>
+				</div>
+				<div class="social">
+					<h4>Подпишись</h4>
+					<a href="#"><i class="fab fa-vk fa-2x"></i></a>
+					<a href="#"><i class="fab fa-telegram fa-2x"></i></a>
+					<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+				</div>
+			</div>
+		</footer>
+		<script src="/frontend/js/modal.js"></script>
+	</body>
+</html>
