@@ -32,6 +32,7 @@
 		/>
 		<link rel="icon" href="{% static "images/favicon-32x32.png" %}" />
 		<link rel="stylesheet" href="{% static "css/styles.css" %}" />
+		{% block custom_style %}{% endblock custom_style %}
 		<title>{{ title }}</title>
 	</head>
 	<body>
