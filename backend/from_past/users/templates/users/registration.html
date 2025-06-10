@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+		<section class="registration page-background backend-content" style="
+												  background-image: linear-gradient(
+												  	to bottom,
+												  	rgba(161, 8, 167, 0.6),
+												  	rgba(161, 8, 167, 0.8)
+												  ),
+												  url('{% static "images/code.jpg" %}');">
+			<div class="form-registration container container-lg">
+				<h2>Регистрация</h2>
+				<form action="{% url "users:registration" %}" method="post">
+					{% csrf_token %}
+					<div class="input-group">
+						<label for="username"><i class="icon-user"></i></label>
+						<input type="text" id="username" placeholder="{{ form.username.field.widget.attrs.placeholder }}" name="username" required />
+					</div>
+					<div class="input-group">
+						<label for="password"><i class="icon-lock"></i></label>
+						<input
+							type="password"
+							id="password" 
+							name="password1"
+							placeholder="{{ form.password1.field.widget.attrs.placeholder }}"
+							required
+						/>
+					</div>
+					<div class="input-group">
+						<label for="confirm-password"><i class="icon-lock"></i></label>
+						<input
+							type="password"
+							id="confirm-password"
+							name="password2"
+							placeholder="{{ form.password2.field.widget.attrs.placeholder }}"
+							required
+						/>
+					</div>
+					<div class="input-group">
+						<label for="email"><i class="icon-envelope"></i></label>
+						<input type="email" id="email" name="email" placeholder="{{ form.email.field.widget.attrs.placeholder }}" required />
+					</div>
+					<div class="checkbox-group">
+						<input type="checkbox" id="terms" required />
+						<label for="terms">Я принимаю условия использования</label>
+					</div>
+					<button type="submit" class="signup-btn">Зарегистрироваться</button>
+					<p class="login-link">
+						Уже зарегистрированы? <a href="{% url "users:sign_in" %}">Авторизация</a>
+					</p>
+				</form>
+			</div>
+		</section>
+{% endblock content %}
