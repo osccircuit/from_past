@@ -195,6 +195,37 @@ img {
 	text-align: center;
 }
 
+.hero-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 9rem;
+}
+
+/* .user-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	margin-top: 2.4rem;
+} */
+
+.user-card img {
+	width: 70rem;
+	height: auto;
+	border-radius: 11px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+	margin-bottom: 3.2rem;
+}
+
+.user-card p {
+	color: #380835;
+	font-size: 2rem;
+	font-weight: 600;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 2.4rem;
+}
+
 .hero h2 {
 	font-size: 4.4rem;
 	line-height: 1.4;
@@ -491,16 +522,16 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 0 2.4rem 3.8rem 2.4rem;
+	padding: 3.8rem 2.4rem;
 	border-radius: 11px;
 }
 
-.archive-card {
+/* .archive-card {
 	max-width: 30rem;
 	background-color: #f5f5dc;
 	padding: 2.4rem;
 	border-radius: 11px;
-}
+} */
 
 .archive-items-flex {
 	display: flex;
@@ -511,7 +542,7 @@ img {
 
 .archive-items {
 	margin-top: 2.4rem;
-	padding: 0 0 2rem 0;
+	padding: 2rem;
 }
 
 .archive-items button {
@@ -533,11 +564,20 @@ img {
 	background-color: #ffd700;
 }
 
-.user-card-archive img {
+.archive-btn {
+	padding: 1.6rem 2.6rem;
+	margin-bottom: 2rem;
+}
+
+/* .user-card-archive img {
 	width: 6rem;
 	height: auto;
 	border-radius: 100%;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+} */
+
+.user-card-archive {
+	padding: 2rem;
 }
 
 .user-card-archive p {
@@ -545,7 +585,7 @@ img {
 	font-size: 1.6rem;
 	font-weight: 600;
 	font-family: 'Lato', sans-serif;
-	margin-top: 1.8rem;
+	margin-top: 1rem;
 }
 
 /* Модалка - фон */
@@ -591,28 +631,6 @@ img {
 	display: none;
 }
 
-.user-card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5rem;
-	margin-top: 2.4rem;
-}
-
-.user-card img {
-	width: 10rem;
-	height: auto;
-	border-radius: 100%;
-	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.user-card p {
-	color: #380835;
-	font-size: 1.6rem;
-	font-weight: 600;
-	font-family: 'Lato', sans-serif;
-}
-
 .archive-heading {
 	font-size: 2.4rem;
 	color: #380835;
@@ -625,7 +643,7 @@ img {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: 600;
-	margin-bottom: 0.8rem;
+	margin-bottom: 2rem;
 }
 
 .letter-card p {
@@ -634,7 +652,7 @@ img {
 	font-style: italic;
 	font-size: 2.4rem;
 	margin-top: 3.2rem;
-	margin-bottom: 3.2rem;
+	margin-bottom: 4.8rem;
 }
 
 .read-btn {
