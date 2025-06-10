@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block hero_content %}
+		<section class="hero">
+			<div class="container container-sm">
+				<h2>
+					Письма из прошлого:
+					<span class="primary"
+						>От меня, каким я был! Ко мне, каким я стал!
+					</span>
+				</h2>
+			</div>
+		</section>
+{% endblock hero_content %}
+
+{% block content %}
+		<section class="letter">
+			<div class="container container-sm">
+				<img
+					src="{% static "images/марка.jpg" %}"
+					alt="Угловой элемент почтовая марка"
+					class="corner-image"
+				/>
+				<h2 class="letter-heading">Письмо в будущее</h2>
+				<p>Напиши себе - тому, кем ты будешь через год, пять или десять лет.</p>
+				<form>
+					<div class="form-letter">
+						<label class="visually-hidden" for="letter-label-to">Кому</label>
+						<input
+							type="text"
+							id="letter-label-to"
+							name="letter-label-to"
+							placeholder="Кому"
+						/>
+						<div class="form-letter">
+							<label class="visually-hidden" for="letter-label-from"
+								>От кого</label
+							>
+							<input
+								type="text"
+								id="letter-label-from"
+								name="letter-label-from"
+								placeholder="От кого"
+							/>
+						</div>
+					</div>
+					<div class="form-date">
+						<label for="futureDate">Дата получения</label>
+						<input type="date" id="futureDate" name="futureDate" />
+					</div>
+
+					<div class="form-letter">
+						<label class="visually-hidden" for="letterContent"
+							>Ваше письмо</label
+						>
+						<textarea
+							type="date"
+							id="letterContent"
+							name="letterContent"
+							placeholder="Ваше письмо"
+						></textarea>
+					</div>
+					<div class="form-letter">
+						<button class="btn-letter" type="submit">Отправить письмо</button>
+					</div>
+				</form>
+			</div>
+		</section>
+{% endblock content %}
