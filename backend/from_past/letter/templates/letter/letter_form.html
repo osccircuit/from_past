@@ -25,30 +25,31 @@
 				/>
 				<h2 class="letter-heading">Письмо в будущее</h2>
 				<p>Напиши себе - тому, кем ты будешь через год, пять или десять лет.</p>
-				<form>
+				<form action="{% url "letter:letter" %}" method="post">
+					{% csrf_token %}
 					<div class="form-letter">
 						<label class="visually-hidden" for="letter-label-to">Кому</label>
 						<input
 							type="text"
 							id="letter-label-to"
-							name="letter-label-to"
-							placeholder="Кому"
+							name="{{ form.for_who.name }}"
+							placeholder="{{ form.for_who.field.widget.attrs.placeholder }}"
 						/>
 						<div class="form-letter">
 							<label class="visually-hidden" for="letter-label-from"
-								>От кого</label
+								>От кого</label 
 							>
 							<input
 								type="text"
 								id="letter-label-from"
-								name="letter-label-from"
-								placeholder="От кого"
+								name="{{ from_who.name }}"
+								placeholder="{{ form.from_who.field.widget.attrs.placeholder }}"
 							/>
 						</div>
 					</div>
 					<div class="form-date">
-						<label for="futureDate">Дата получения</label>
-						<input type="date" id="futureDate" name="futureDate" />
+						<label for="futureDate">{{ form.date_arrival.label }}</label>
+						<input type="date" id="futureDate" name="{{ form.date_arrival.name }}" />
 					</div>
 
 					<div class="form-letter">
@@ -58,8 +59,8 @@
 						<textarea
 							type="date"
 							id="letterContent"
-							name="letterContent"
-							placeholder="Ваше письмо"
+							name="{{ form.letter_text.name }}"
+							placeholder="{{ form.letter_text.field.widget.attrs.placeholder }}"
 						></textarea>
 					</div>
 					<div class="form-letter">
