@@ -37,6 +37,7 @@
 							type="text"
 							id="letter-label-to"
 							name="{{ form.for_who.name }}"
+							value="{{ form.for_who.value }}"
 							placeholder="{{ form.for_who.field.widget.attrs.placeholder }}"
 						/>
 						{% comment %} {% if form.for_who.errors %}
@@ -59,6 +60,7 @@
 								type="text"
 								id="letter-label-from"
 								name="{{ form.from_who.name }}"
+								value="{{ form.from_who.value }}"
 								placeholder="{{ form.from_who.field.widget.attrs.placeholder }}"
 							/>
 							{% if form.from_who.errors %}
@@ -72,7 +74,12 @@
 					</div>
 					<div class="form-date">
 						<label for="futureDate">{{ form.date_arrival.label }}</label>
-						<input type="date" id="futureDate" name="{{ form.date_arrival.name }}" />
+						<input 
+							type="date" 
+							id="futureDate" 
+							name="{{ form.date_arrival.name }}" 
+							value="{{ form.date_arrival.value }}"		
+						/>
 						{% if form.date_arrival.errors %}
 							<div class="notification error">
 							{% for error in form.date_arrival.errors %}
@@ -87,11 +94,10 @@
 							>Ваше письмо</label
 						>
 						<textarea
-							type="date"
 							id="letterContent"
 							name="{{ form.letter_text.name }}"
 							placeholder="{{ form.letter_text.field.widget.attrs.placeholder }}"
-						></textarea>
+						>{{ form.letter_text.value }}</textarea>
 						{% if form.letter_text.errors %}
 							<div class="notification error">
 							{% for error in form.letter_text.errors %}

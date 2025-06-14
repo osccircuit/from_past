@@ -16,18 +16,18 @@ class NewLetterView(LoginRequiredMixin, FormView):
 
     def form_valid(self, form):
         user = self.request.user
-        for_who = form.cleaned_data['for_who']
-        from_who = form.cleaned_data['from_who']
-        date_arrival = form.cleaned_data['date_arrival']
-        letter_text = form.cleaned_data['letter_text']
-        letter = Letter(
-            user=user,
-            for_who=for_who,
-            from_who=from_who,
-            date_arrival=date_arrival,
-            letter_text=letter_text
-        )
         try:
+            for_who = form.cleaned_data['for_who']
+            from_who = form.cleaned_data['from_who']
+            date_arrival = form.cleaned_data['date_arrival']
+            letter_text = form.cleaned_data['letter_text']
+            letter = Letter(
+                user=user,
+                for_who=for_who,
+                from_who=from_who,
+                date_arrival=date_arrival,
+                letter_text=letter_text
+            )
             letter.full_clean()
             letter.save()
         except ValidationError as error:
