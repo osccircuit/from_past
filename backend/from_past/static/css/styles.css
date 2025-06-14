@@ -102,8 +102,19 @@ img {
 	max-width: 100%;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
 .page-background {
-	height: 100vh;
+	min-height: 100vh;
 	background-image: linear-gradient(
 			to bottom,
 			rgba(161, 8, 167, 0.6),
@@ -181,6 +192,37 @@ img {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+
+.hero-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 9rem;
+}
+
+/* .user-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	margin-top: 2.4rem;
+} */
+
+.user-card img {
+	width: 70rem;
+	height: auto;
+	border-radius: 11px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+	margin-bottom: 3.2rem;
+}
+
+.user-card p {
+	color: #380835;
+	font-size: 2rem;
+	font-weight: 600;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 2.4rem;
 }
 
 .hero h2 {
@@ -364,6 +406,297 @@ img {
 	padding: 0.9rem;
 }
 
+/* LETTER
+--------- */
+
+.letter {
+	padding: 4.8rem 0 6.4rem;
+	background-color: #f5f5dc;
+	position: relative;
+}
+
+.letter h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 3.2rem;
+	font-weight: 900;
+	line-height: 1.6;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}
+
+.letter p {
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #2d2d2d;
+	margin-bottom: 4.8rem;
+	text-align: center;
+}
+
+.form-letter {
+	margin: 3.2rem 0;
+}
+
+.form-letter input,
+.form-letter textarea {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #2d2d2d;
+	width: 100%;
+	padding-bottom: 0.6rem;
+	background-color: #f5f5dc;
+}
+
+.form-letter textarea {
+	height: 30rem;
+}
+
+.form-date label,
+.form-letter ::placeholder {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 1.6rem;
+}
+
+.form-date input {
+	border: none;
+	border-bottom: 1px solid #2d2d2d;
+	margin-left: 3.2rem;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.4rem;
+	background-color: #f5f5dc;
+}
+
+.form-date input:focus {
+	outline: 0;
+}
+
+.corner-image {
+	position: absolute;
+	top: 4rem; /* Расстояние от верхнего края */
+	right: 6rem; /* Расстояние от правого края */
+	width: 12rem; /* Размер изображения */
+	height: auto; /* Сохраняем пропорции */
+	z-index: 1;
+}
+
+.btn-letter {
+	display: inline-block;
+	padding: 1.6rem 3.2rem;
+	border: 1px solid #2d2d2d;
+	background-color: #250524;
+	color: #ffd700;
+	font-size: 1.6rem;
+	cursor: pointer;
+}
+
+.btn-letter:hover {
+	box-shadow: inset 0 0 0 3px #ffd700;
+	background-color: #c849c1;
+	transition: all 1s;
+	color: #250524;
+}
+
+.letter button {
+	width: 100%;
+}
+
+/* ARCHIVE
+---------- */
+
+.archive-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	padding: 6.4rem 2.4rem 2.4rem;
+	text-align: center;
+}
+
+.letter-card {
+	/* background-image: url(/frontend/images/archive-bc.jpg); */
+	max-width: 35rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 3.8rem 2.4rem;
+	border-radius: 11px;
+}
+
+/* .archive-card {
+	max-width: 30rem;
+	background-color: #f5f5dc;
+	padding: 2.4rem;
+	border-radius: 11px;
+} */
+
+.archive-items-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.archive-items {
+	margin-top: 2.4rem;
+	padding: 2rem;
+}
+
+.archive-items button {
+	margin-top: 1rem;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #250524;
+	border: none;
+	cursor: pointer;
+	padding: 0.3rem 0.5rem;
+}
+
+.archive-items button:hover {
+	box-shadow: inset 0 0 0 1.2px #250524;
+	transition: all 0.5s;
+	padding: 0.3rem 0.5rem;
+	background-color: #ffd700;
+}
+
+.archive-btn {
+	padding: 1.6rem 2.6rem;
+	margin-bottom: 2rem;
+}
+
+/* .user-card-archive img {
+	width: 6rem;
+	height: auto;
+	border-radius: 100%;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+} */
+
+.user-card-archive {
+	padding: 2rem;
+}
+
+.user-card-archive p {
+	color: #380835;
+	font-size: 1.6rem;
+	font-weight: 600;
+	font-family: 'Lato', sans-serif;
+	margin-top: 1rem;
+}
+
+/* Модалка - фон */
+.modal-archive {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+/* Контент */
+.modal-content-archive {
+	background-color: #f5f5dc;
+	padding: 2rem 3rem;
+	border-radius: 11px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	max-width: 50rem;
+	width: 90%;
+	position: relative;
+	font-family: 'Lora', serif;
+	color: #250524;
+	font-size: 1.4rem;
+}
+
+/* Закрыть */
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 2rem;
+	color: #250524;
+	cursor: pointer;
+}
+
+/* Скрыто по умолчанию */
+.hidden {
+	display: none;
+}
+
+.archive-heading {
+	font-size: 2.4rem;
+	color: #380835;
+	margin-top: 1.6rem;
+	margin-bottom: 1.4rem;
+}
+
+.letter-card span {
+	text-align: left;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.letter-card p {
+	font-family: 'Lora', serif;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 2.4rem;
+	margin-top: 3.2rem;
+	margin-bottom: 4.8rem;
+}
+
+.archive-card p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.read-btn {
+	align-self: center;
+	margin-top: auto;
+}
+
+/* Стили модального окна */
+.modal {
+	display: none; /* По умолчанию скрыто */
+	position: fixed;
+	z-index: 1050;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #f5f5dc;
+	margin: 15% auto;
+	font-size: 1.6rem;
+	font-style: italic;
+	line-height: 2rem;
+	padding: 2rem;
+	border: 1px solid #888;
+	width: 70%;
+	position: relative;
+}
+
+.close-btn {
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
 /* FOOTER
 ========= */
 
@@ -402,7 +735,8 @@ img {
 
 @media (max-width: 48em) {
 	.header .header-flex,
-	.footer .footer-flex {
+	.footer .footer-flex,
+	.archive .archive-flex {
 		flex-direction: column;
 		gap: 2.4rem;
 	}
@@ -433,5 +767,12 @@ img {
 
 	.footer .footer-flex {
 		text-align: center;
+	}
+
+	.corner-image {
+		top: 0;
+		right: 0;
+		width: 5rem;
+		height: auto;
 	}
 }

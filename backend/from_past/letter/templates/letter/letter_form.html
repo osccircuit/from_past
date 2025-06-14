@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block custom_style %}
+	<link rel="stylesheet" href="{% static "css/notifications.css" %}" />
+{% endblock custom_style %}
+
+{% block hero_content %}
+		<section class="hero">
+			<div class="container container-sm">
+				<h2>
+					Письма из прошлого:
+					<span class="primary"
+						>От меня, каким я был! Ко мне, каким я стал!
+					</span>
+				</h2>
+			</div>
+		</section>
+{% endblock hero_content %}
+
+{% block content %}
+		<section class="letter">
+			<div class="container container-sm">
+				<img
+					src="{% static "images/марка.jpg" %}"
+					alt="Угловой элемент почтовая марка"
+					class="corner-image"
+				/>
+				<h2 class="letter-heading">Письмо в будущее</h2>
+				<p>Напиши себе - тому, кем ты будешь через год, пять или десять лет.</p>
+				<form action="{% url "letter:letter" %}" method="post">
+					{% csrf_token %}
+					<div class="form-letter">
+						<label class="visually-hidden" for="letter-label-to">Кому</label>
+						<input
+							type="text"
+							id="letter-label-to"
+							name="{{ form.for_who.name }}"
+							placeholder="{{ form.for_who.field.widget.attrs.placeholder }}"
+						/>
+						{% comment %} {% if form.for_who.errors %}
+							{% for error in form.for_who.errors %}
+								{{ error }}	
+							{% endfor %}
+						{% endif %} {% endcomment %}
+						{% if form.for_who.errors %}
+							<div class="notification error">
+							{% for error in form.letter_text.errors %}
+                  				{{ error }}
+							{% endfor %}
+              			</div>
+						{% endif %}
+						<div class="form-letter">
+							<label class="visually-hidden" for="letter-label-from"
+								>От кого</label 
+							>
+							<input
+								type="text"
+								id="letter-label-from"
+								name="{{ form.from_who.name }}"
+								placeholder="{{ form.from_who.field.widget.attrs.placeholder }}"
+							/>
+							{% if form.from_who.errors %}
+								<div class="notification error">
+								{% for error in form.from_who.errors %}
+									{{ error }}	
+								{% endfor %}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="form-date">
+						<label for="futureDate">{{ form.date_arrival.label }}</label>
+						<input type="date" id="futureDate" name="{{ form.date_arrival.name }}" />
+						{% if form.date_arrival.errors %}
+							<div class="notification error">
+							{% for error in form.date_arrival.errors %}
+                    			{{ error }}	
+							{% endfor %}
+                			</div>
+						{% endif %}
+					</div>
+
+					<div class="form-letter">
+						<label class="visually-hidden" for="letterContent"
+							>Ваше письмо</label
+						>
+						<textarea
+							type="date"
+							id="letterContent"
+							name="{{ form.letter_text.name }}"
+							placeholder="{{ form.letter_text.field.widget.attrs.placeholder }}"
+						></textarea>
+						{% if form.letter_text.errors %}
+							<div class="notification error">
+							{% for error in form.letter_text.errors %}
+                    			{{ error }}
+							{% endfor %}
+                			</div>
+						{% endif %}
+					</div>
+					<div class="form-letter">
+						<button class="btn-letter" type="submit">Отправить письмо</button>
+					</div>
+				</form>
+			</div>
+		</section>
+{% endblock content %}
