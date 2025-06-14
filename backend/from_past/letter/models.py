@@ -15,7 +15,7 @@ class Letter(models.Model):
     letter_text = models.TextField(verbose_name='Текст письма')
     date_arrival = models.DateField(validators=[validate_today_date])
 
-    def check_date_arrival(self):
+    def is_date_arrival(self):
         if self.date_arrival == date.today():
             return True
         return False
