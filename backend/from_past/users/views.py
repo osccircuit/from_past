@@ -13,7 +13,7 @@ class RegistrationView(CreateView):
     form_class = RegistrationUserForm
 
     def get_success_url(self):
-        return reverse_lazy("main:index")
+        return reverse_lazy("users:sign_in")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
