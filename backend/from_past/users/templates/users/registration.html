@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block custom_style %}
+	<link rel="stylesheet" href="{% static "css/notifications.css" %}" />
+{% endblock custom_style %}
+
 {% block content %}
 		<section class="registration page-background backend-content" style="
 												  background-image: linear-gradient(
@@ -17,6 +21,13 @@
 					<div class="input-group">
 						<label for="username"><i class="icon-user"></i></label>
 						<input type="text" id="username" placeholder="{{ form.username.field.widget.attrs.placeholder }}" name="username" required />
+						{% if form.username.errors %}
+							<div class="notification error">
+							{% for error in form.username.errors %}
+								{{ error }}
+							{% endfor %}
+							</div>
+						{% endif %}
 					</div>
 					<div class="input-group">
 						<label for="password"><i class="icon-lock"></i></label>
@@ -27,6 +38,13 @@
 							placeholder="{{ form.password1.field.widget.attrs.placeholder }}"
 							required
 						/>
+						{% if form.password.errors %}
+							<div class="notification error">
+							{% for error in form.password.errors %}
+								{{ error }}
+							{% endfor %}
+							</div>
+						{% endif %}
 					</div>
 					<div class="input-group">
 						<label for="confirm-password"><i class="icon-lock"></i></label>
@@ -37,10 +55,24 @@
 							placeholder="{{ form.password2.field.widget.attrs.placeholder }}"
 							required
 						/>
+							{% if form.password2.errors %}
+								<div class="notification error">
+								{% for error in form.password2.errors %}
+									{{ error }}
+								{% endfor %}
+								</div>
+							{% endif %}
 					</div>
 					<div class="input-group">
 						<label for="email"><i class="icon-envelope"></i></label>
 						<input type="email" id="email" name="email" placeholder="{{ form.email.field.widget.attrs.placeholder }}" required />
+						{% if form.email.errors %}
+							<div class="notification error">
+							{% for error in form.email.errors %}
+								{{ error }}
+							{% endfor %}
+							</div>
+						{% endif %}
 					</div>
 					<div class="checkbox-group">
 						<input type="checkbox" id="terms" required />

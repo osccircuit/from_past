@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block custom_style %}
+	<link rel="stylesheet" href="{% static "css/notifications.css" %}" />
+{% endblock custom_style %}
+
 {% block content %}
     <section class="registration page-background backend-content" style="
 												  background-image: linear-gradient(
@@ -16,6 +20,13 @@
 					{% csrf_token %}
 					{% if request.GET.next %}
 						<input type="hidden" class="" name="next" value="{{ request.GET.next }}">
+					{% endif %}
+					{% if form.non_field_errors %}
+						<div class="notification error">
+							{% for error in form.non_field_errors %}
+								{{ error }}
+							{% endfor %}
+						</div>
 					{% endif %}
 					<div class="input-group">
 						<label for="username"><i class="icon-user"></i></label>
