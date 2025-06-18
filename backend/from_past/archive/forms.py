@@ -3,9 +3,9 @@ from django import forms
 from users.models import User
 
 class UpdateForm(UserChangeForm):
-    image = forms.ImageField()
-    username = forms.CharField()
-    email = forms.CharField()
+    image = forms.ImageField(label='Изменить аватар')
+    username = forms.CharField(label='Пользователь')
+    email = forms.CharField(label='Email')
 
     class Meta:
         model = User

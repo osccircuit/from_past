@@ -6,27 +6,15 @@
 	<section class="hero">
 		<div class="container container-sm hero-flex">
 			<div class="user-card">
-				<img
-					src="{{ user.image.url }}"
-					alt="фотография пользователя"
-				/>
-				<p>Мария Петрова</p>
-				<p class="user-email">maria.p@test.com</p>
 				<form>
-					<table>
-						<tr>
-							<th>{{ form.image.label }}</th>		
-							<td>{{ form.image }}</td>
-						</tr>
-						<tr>
-							<th>{{ form.username.label }}</th>		
-							<td>{{ form.username }}</td>
-						</tr>
-						<tr>
-							<th>{{ form.email.label }}</th>		
-							<td>{{ form.email }}</td>
-						</tr>
-					</table>
+					<img
+						src="{{ user.image.url }}"
+						alt="фотография пользователя"
+					/>
+					<p>{{ form.image.label }}: <input type="file" name="{{ form.image.name }}" id="id_image">
+					</p>
+					<p>{{ form.username.label }}: {{ form.username }}</p>
+					<p class="user-email">{{form.email.label }}: {{ form.email }}</p>
 				</form>
 			</div>
 			<div class="hero-title">
