@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block hero_content %}
+	<section class="hero">
+		<div class="container container-sm hero-flex">
+			<div class="user-card">
+				<img
+					src="{% static "images/1-Мария.jpg" %}"
+					alt="фотография пользователя"
+				/>
+				<p>Мария Петрова</p>
+				<p class="user-email">maria.p@test.com</p>
+			</div>
+			<div class="hero-title">
+				<h2>
+					Письма, которые:
+					<span class="primary"
+						>ждут своего часа - твой архив мыслей, адресованных себе.
+					</span>
+				</h2>
+			</div>
+		</div>
+	</section>
+{% endblock hero_content %}
+
+{% block content %}
+	<section class="archive page-background">
+		<div class="container container-lg archive-flex">
+			<div class="letter-card">
+				
+				<h2 class="archive-heading">Письмо из прошлого</h2>
+				<span>Отправлено: 23.06.2019</span>
+				<span>Получено: 01.01.2025</span>
+				<p>
+					"Это письмо отправлено из прошлого. Получатель - ты. Время
+					изменилось, ты изменилась…"
+				</p>
+
+				<button class="read-btn signup-btn archive-btn">Прочитать</button>
+			</div>
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn">&times;</span>
+					<p id="letter-text">
+						Это письмо отправлено из прошлого. Получатель - ты. Время
+						изменилось, ты изменилась…В рамках спецификации современных
+						стандартов, независимые государства, вне зависимости от их уровня,
+						должны быть заблокированы в рамках своих собственных рациональных
+						ограничений. Ясность нашей позиции очевидна: консультация с
+						широким активом не оставляет шанса для своевременного выполнения
+						сверхзадачи. Лишь независимые государства освещают чрезвычайно
+						интересные особенности картины в целом, однако конкретные выводы,
+						разумеется, ограничены исключительно образом мышления.
+					</p>
+				</div>
+			</div>
+			<div class="letter-card">
+				
+				<h2 class="archive-heading">Письмо из прошлого</h2>
+				<span>Отправлено: 23.06.2017</span>
+				<span>Получить: 01.01.2026</span>
+				<p>
+					"Привет! Пишу тебе из прошлого - самой себе. Интересно, какая ты
+					теперь..."
+				</p>
+
+				<button class="read-btn signup-btn archive-btn">Удалить</button>
+			</div>
+
+			<div class="letter-card  archive-card">
+				<div class="user-card-archive">
+					<!-- <img
+						src="/frontend/images/1-Мария.jpg"
+						alt="фотография пользователя"
+					/> -->
+					<p>Архив Марии</p>
+				</div>
+				<div class="archive-items-flex">
+					<ul class="archive-items">
+						<li>
+							<button class="btn-archive" type="button" data-year="2018">
+								Письмо из 2018 года
+							</button>
+						</li>
+						<li>
+							<button class="btn-archive" type="button" data-year="2019">
+								Письмо из 2019 года
+							</button>
+						</li>
+						<li>
+							<button class="btn-archive" type="button" data-year="2020">
+								Письмо из 2020 года
+							</button>
+						</li>
+						<li>
+							<button class="btn-archive" type="button" data-year="2021">
+								Письмо из 2021 года
+							</button>
+						</li>
+						<li>
+							<button class="btn-archive" type="button" data-year="2022">
+								Письмо из 2022 года
+							</button>
+						</li>
+						<li>
+							<button class="btn-archive" type="button" data-year="2023">
+								Письмо из 2023 года
+							</button>
+						</li>
+					</ul>
+					<div id="modal-archive" class="modal-archive hidden">
+						<div class="modal-content-archive">
+							<span class="close-button">&times;</span>
+							<h2 id="modal-title"></h2>
+							<p id="modal-text"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+
+{% block script %}
+	<script src="{% static "js/modal.js" %}"></script>
+{% endblock script %}
