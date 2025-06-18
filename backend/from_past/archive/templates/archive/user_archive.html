@@ -26,9 +26,15 @@
 {% endblock hero_content %}
 
 {% block content %}
-	<section class="archive page-background">
+	<section class="archive page-background" style="
+												  background-image: linear-gradient(
+												  	to bottom,
+												  	rgba(161, 8, 167, 0.6),
+												  	rgba(161, 8, 167, 0.8)
+												  ),
+												  url('{% static "images/code.jpg" %}');">
 		<div class="container container-lg archive-flex">
-			<div class="letter-card">
+			<div class="letter-card" style="background-image: url({% static "images/archive-bc.jpg" %})">
 				
 				<h2 class="archive-heading">Письмо из прошлого</h2>
 				<span>Отправлено: 23.06.2019</span>
@@ -56,7 +62,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="letter-card">
+			<div class="letter-card" style="background-image: url({% static "images/archive-bc.jpg" %})">
 				
 				<h2 class="archive-heading">Письмо из прошлого</h2>
 				<span>Отправлено: 23.06.2017</span>
@@ -69,7 +75,7 @@
 				<button class="read-btn signup-btn archive-btn">Удалить</button>
 			</div>
 
-			<div class="letter-card  archive-card">
+			<div class="letter-card  archive-card" style="background-image: url({% static "images/archive-bc.jpg" %})">
 				<div class="user-card-archive">
 					<!-- <img
 						src="/frontend/images/1-Мария.jpg"

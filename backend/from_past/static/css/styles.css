@@ -514,7 +514,7 @@ img {
 }
 
 .letter-card {
-	/* background-image: url(/frontend/images/archive-bc.jpg); */
+	background-image: url(/frontend/images/archive-bc.jpg);
 	max-width: 35rem;
 
 	display: flex;
@@ -696,6 +696,7 @@ img {
 	font-size: 24px;
 	cursor: pointer;
 }
+
 
 /* FOOTER
 ========= */
