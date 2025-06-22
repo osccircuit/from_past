@@ -4,5 +4,5 @@ from archive.views import UserArchiveView
 app_name = 'archive'
 
 urlpatterns = [
-    path('user_archive', UserArchiveView.as_view(), name='user-archive')
+    path('user_archive/', UserArchiveView.as_view(), name='user-archive')
 ]

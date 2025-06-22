@@ -6,7 +6,8 @@
 	<section class="hero">
 		<div class="container container-sm hero-flex">
 			<div class="user-card">
-				<form>
+				<form method="post" action="{% url "archive:user-archive" %}">
+					{% csrf_token %}
 					<img
 						src="{{ user.image.url }}"
 						alt="фотография пользователя"
