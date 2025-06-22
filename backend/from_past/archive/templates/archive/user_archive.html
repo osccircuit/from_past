@@ -11,10 +11,11 @@
 						src="{{ user.image.url }}"
 						alt="фотография пользователя"
 					/>
-					<p>{{ form.image.label }}: <input type="file" name="{{ form.image.name }}" id="id_image">
+					<p class="input-group2">{{ form.image.label }}: <input type="file" name="{{ form.image.name }}" id="id_image">
 					</p>
-					<p>{{ form.username.label }}: {{ form.username }}</p>
-					<p class="user-email">{{form.email.label }}: {{ form.email }}</p>
+					<p class="input-group2">{{ form.username.label }}: {{ form.username }}</p>
+					<p class="user-email input-group2">{{ form.email.label }}: {{ form.email }}</p>
+					<button class="archive-items signup-btn" type="submit">Сохранить</button>
 				</form>
 			</div>
 			<div class="hero-title">
